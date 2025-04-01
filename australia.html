@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Australian Universities</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f9e6f7, #f1c0d6);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #d15b87;
+    font-size: 28px;
+    margin-bottom: 65px; /* Space after the heading */
+}
+
+.info{
+    font-size: 18px;
+    text-align: center;
+    color: #0c033a;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.university-info {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px; /* Increased margin between university chatboxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.university-info:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.university-info h3 {
+    color: #d15b87;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.university-description {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.university-details {
+    display: none;
+    margin-top: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.university-details.show {
+    display: block;
+    opacity: 1;
+}
+
+.university-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+}
+
+.university-details li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.btn {
+    background-color: #d15b87;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #b74a6b;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Footer styling */
+footer {
+    background-color: #d15b87;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+footer a {
+    color: #f9e6f7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+
+    <h2>Top Australian Universities</h2>
+
+    <!-- University 1: University of Sydney -->
+    <div class="university-info">
+        <h3>University of Sydney</h3>
+        <p class="university-description">The University of Sydney is one of Australia’s oldest and most prestigious institutions, founded in 1850. It is known for its world-class research, diverse academic programs, and strong emphasis on student success. With a vibrant campus and a global community, the university offers numerous opportunities for both domestic and international students. Its academic excellence and comprehensive student support services make it a top choice for higher education in Australia.
+        </p>
+        <div class="btn-container">
+            <button class="btn" onclick="toggleDetails('sydneyDetails')">See More</button>
+        </div>
+        <div id="sydneyDetails" class="university-details">
+            <ul>
+                <li><strong>Opportunities:</strong> Scholarships, research programs, and work-study opportunities available for international students.</li>
+                <li><strong>Application Process:</strong>
+                    <ul>
+                        <li>Gather necessary documents: This may include:
+                            Academic transcripts,
+                            English language proficiency test scores (IELTS, TOEFL, PTE, etc.),
+                            Passport copy,
+                            Statement of purpose (for postgraduate applications),
+                            Letter(s) of recommendation (for postgraduate applications),
+                            Portfolio or audition materials (if applicable).
+                            </li>
+                        <li>Applications are usually submitted directly through the University of Sydney's application portal.
+                        </li>
+                        <li>Pay the application fee: The application fee is typically AUD 150.
+                        </li>
+                        <li>For detailed application information, visit the <a href="https://www.uac.edu.au/" target="_blank" style="color: #d15b87; text-decoration: underline;">Universities Admissions Centre (UAC)</a>.</li>
+                    </ul>
+                </li>
+                <li><strong>Eligibility Criteria:</strong> 
+                    <ul>
+                        <li>An undergraduate degree (or equivalent) in any discipline, with
+                            a Weighted Average Mark (WAM) of at least 65% (or equivalent)                            
+                        </li>
+                        <li>IELTS score - The minimum overall band required to get into UOM is 6.5 .
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Important links:</strong> 
+                <ul>
+                    <li>
+                        University of Sydney website: https://www.sydney.edu.au/study/applying.html
+                    </li>
+                    <li>
+                        Universities Admissions Centre (UAC): https://www.uac.edu.au/
+                    </li>
+                </ul>
+                </li>
+                <li><strong>Status:</strong> Currently closed for the January session.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- University 2: University of Melbourne -->
+    <div class="university-info">
+        <h3>University of Melbourne</h3>
+        <p class="university-description">The University of Melbourne is one of Australia’s leading universities, renowned for its research, teaching, and global impact. Established in 1853, it consistently ranks among the top universities worldwide, offering a wide range of undergraduate and postgraduate programs. The university fosters a diverse and inclusive environment, with a strong focus on innovation and academic excellence. Its vibrant campus life and extensive support services make it a popular choice for students from around the globe.</p>
+        <div class="btn-container">
+            <button class="btn" onclick="toggleDetails('melbourneDetails')">See More</button>
+        </div>
+        <div id="melbourneDetails" class="university-details">
+            <ul>
+                <li><strong>Opportunities:</strong> Numerous scholarships available, including merit-based scholarships and financial assistance for international students.</li>
+                <li><strong>Application Process:</strong>
+                    <ul>
+                        <li>Applications are done via the University of Melbourne's online portal.</li>
+                        <li>Documents required include transcripts, an English proficiency test score, and a personal statement.</li>
+                        <li>The application fee for international students applying to the University of Melbourne is AUD$130.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Eligibility Criteria:</strong> 
+                    <ul>
+                        <li>A minimum of 75% in previous qualifications, an IELTS score of 7.0 (with no band less than 6.5),                            
+                        </li>
+                        <li>Completion of prerequisite subjects for the chosen program.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Status:</strong> Applications open for Semester 1 intake (March) and Semester 2 intake (July).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- University 3: Australian National University -->
+    <div class="university-info">
+        <h3>Australian National University</h3>
+        <p class="university-description">The Australian National University (ANU) is a prestigious research-intensive university located in Canberra, Australia. Known for its academic excellence, ANU consistently ranks among the top universities globally, particularly in the fields of social sciences, humanities, and natural sciences. The university offers a wide range of undergraduate, postgraduate, and research opportunities, with a strong emphasis on critical thinking and global engagement. ANU’s collaborative environment and diverse student body make it an ideal choice for those seeking a world-class education.</p>
+        <div class="btn-container">
+            <button class="btn" onclick="toggleDetails('anuDetails')">See More</button>
+        </div>
+        <div id="anuDetails" class="university-details">
+            <ul>
+                <li><strong>Opportunities:</strong> Offers a wide range of scholarships for international students, including research grants and fellowships.</li>
+                <li><strong>Application Process:</strong>
+                    <ul>
+                        <li>Submit your application via the ANU online portal.</li>
+                        <li>Required documents include proof of previous study, English proficiency results, and a statement of purpose.</li>
+                        <li>The application fee for international students applying to the Australian National University (ANU) is AUD$100.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Eligibility Criteria:</strong> 
+                    <ul>
+                        <li>For undergraduate programs: Minimum GPA of 3.0/4.0 (or equivalent), IELTS score of 6.5 (with no band below 6.0)                        
+                        </li>
+                        <li>For postgraduate programs: A minimum GPA of 4.0/7.0 or equivalent.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Status:</strong> Applications for undergraduate and postgraduate courses for both domestic and international students are now open.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- University 4: University of Queensland -->
+    <div class="university-info">
+        <h3>University of Queensland</h3>
+        <p class="university-description">The University of Queensland (UQ) is a prestigious research university located in Brisbane, Australia, known for its academic excellence and global impact. Established in 1909, UQ consistently ranks among the top universities in the world, offering a wide range of undergraduate and postgraduate programs. The university boasts a strong focus on research, innovation, and employability, with close ties to industries and research institutions worldwide. UQ’s vibrant campus, student support services, and diverse international community make it a top destination for students seeking a world-class education.</p>
+        <div class="btn-container">
+            <button class="btn" onclick="toggleDetails('uqDetails')">See More</button>
+        </div>
+        <div id="uqDetails" class="university-details">
+            <ul>
+                <li><strong>Opportunities:</strong> UQ offers scholarships for international students, including merit-based and need-based financial aid.</li>
+                <li><strong>Application Process:</strong>
+                    <ul>
+                        <li>Apply online via UQ's application portal.</li>
+                        <li>Submit academic transcripts, English proficiency scores, and a passport copy.</li>
+                        <li>The application fee for international students applying to the University of Queensland (UQ) is AUD$100.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Eligibility Criteria:</strong> 
+                    <ul>
+                        <li> Minimum 70% in prior qualifications and an IELTS score of 6.5                        
+                        </li>
+                        <li> Equivalent for English proficiency.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Status:</strong> Accepting applications for both undergraduate and postgraduate programs for the upcoming academic sessions.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- University 5: Monash University -->
+    <div class="university-info">
+        <h3>Monash University</h3>
+        <p class="university-description">Monash University is a leading global university based in Melbourne, Australia, known for its strong emphasis on research and innovation. Founded in 1958, it is one of the largest universities in Australia, offering a wide range of undergraduate and postgraduate programs. Monash is recognized for its diverse and inclusive community, with campuses in multiple countries and a global network of partners. The university’s commitment to academic excellence, sustainability, and student support makes it a top choice for students worldwide.</p>
+        <div class="btn-container">
+            <button class="btn" onclick="toggleDetails('monashDetails')">See More</button>
+        </div>
+        <div id="monashDetails" class="university-details">
+            <ul>
+                <li><strong>Opportunities:</strong> Monash offers a variety of scholarships and financial support options for international students.</li>
+                <li><strong>Application Process:</strong>
+                    <ul>
+                        <li>Apply via the Monash online portal.</li>
+                        <li>You will need to submit academic records, English proficiency results, and supporting documents.</li>
+                        <li>The application fee for international students applying to Monash University is AUD 100.</li>
+                    </ul>
+                </li>
+                <li><strong>Eligibility Criteria:</strong> 
+                    <ul>
+                        <li> Minimum 75% in prior studies, IELTS score of 6.5 (with no band less than 6.0)                        
+                        </li>
+                        <li> Equivalent English proficiency
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Status:</strong> Applications are open for all undergraduate and postgraduate courses for the next semester.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="info">For further details and information kindly chat with our AI assisstant</p>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Australian Universities & Study Opportunities. All rights reserved. | 
+            <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+        <p>Contact us: <a href="mailto:contact@australianuniversities.com">contact@australianuniversities.com</a> | 
+            Phone: <a href="tel:+61412345678">+61 412 345 678</a></p>
+    </footer>
+    
+
+    <script>
+        function toggleDetails(universityId) {
+            const details = document.getElementById(universityId);
+            const button = details.previousElementSibling.children[0];
+            
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+                details.classList.add('show');
+                button.innerText = "See Less";
+            } else {
+                details.style.display = "none";
+                details.classList.remove('show');
+                button.innerText = "See More";
+            }
+        }
+    </script>
+
+</body>
+</html>
